@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* ----------------------------- Main CSS Document ----------------------------- */
+
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+		color: #efefef;
+		font-size: 16px;
+  		line-height: 150%;
+        font-weight: normal;
+		text-align:left;
+		-webkit-hyphens: auto;
+  		-moz-hyphens: auto;
+  		-ms-hyphens: auto;
+  		hyphens: auto;
+        padding: 0;
+		margin: 0;
+        background: #1f1d1e;
+        -webkit-font-smoothing: antialiased;
+		overflow-x:hidden;
+		margin-block-start: 0px;
+    	margin-block-end: 0px;
+    	margin-inline-start: 0px;
+    	margin-inline-end: 0px;
+    }
+
+	body {
+  	font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+  	line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+	}
+
+	@media only screen and (max-aspect-ratio: 13/9) and (max-width: 450px) {
+	body{text-align: justify;}
+	}
+
+	.maincontent{
+	padding: 2.5em;
+	}
+
+	h1 {
+    font-size: 5em;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	}
+
+	h2 {
+    font-size: 2em;
+	text-align: center;
+	font-weight: bold;
+	margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	line-height: 1em;
+	}
+
+	h3 {
+    font-size: 1.5em;
+	text-align: center;
+	font-weight: bold;
+	margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	line-height: 0.5em;
+	}
+
+	a {
+  	color: #efefef;
+	margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	}
+
+	p {
+  	color: #efefef;
+	margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	}
+	
+	footer{position: absolute; bottom: 0;width: 100%;padding-top: 2.5em;padding-bottom: 2.5em;font-size: 0.4em;opacity: 0.2;text-decoration: none;text-align: center;margin-left: auto;margin-right: auto;}
+
+	.show{display:block !important;}
+	.hide{display:none !important;}
+
+	.center{display: flex;align-items: center;justify-content: center;margin-left: auto;margin-right: auto;}
+
+	.vertical-align-wrap {position: absolute;width: 100%;height: 100%;display: table;}
+
+	.vertical-align {display: table-cell;}
+
+	.vertical-align--middle {vertical-align: middle;}
