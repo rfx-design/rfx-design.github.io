@@ -1,0 +1,110 @@
+p[data-scroll='in'] [data-char]:after {
+  -webkit-animation-name: glitch-switch;
+          animation-name: glitch-switch;
+}
+.reveal--2 [data-char]:after {
+  -webkit-animation-iteration-count: var(--count);
+          animation-iteration-count: var(--count);
+}
+p:nth-of-type(1) {
+  position: absolute;
+  opacity: 0;
+}
+.word {
+  position: relative;
+  display: inline-block;
+  top: 0.3em;
+  letter-spacing: -0.085em;
+}
+
+[data-char] {
+  color: transparent;
+  position: relative;
+}
+[data-char]:after {
+  --txt: attr(data-char);
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-delay: 0.0s;
+          animation-delay: 0.0s;
+  -webkit-animation-timing-function: steps(1);
+          animation-timing-function: steps(1);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  content: var(--txt);
+  color: var(--color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@-webkit-keyframes glitch-switch {
+  0% {
+    content: var(--char-0);
+  }
+  10% {
+    content: var(--char-1);
+  }
+  20% {
+    content: var(--char-2);
+  }
+  30% {
+    content: var(--char-3);
+  }
+  40% {
+    content: var(--char-4);
+  }
+  50% {
+    content: var(--char-5);
+  }
+  60% {
+    content: var(--char-6);
+  }
+  70% {
+    content: var(--char-7);
+  }
+  80% {
+    content: var(--char-8);
+  }
+  90% {
+    content: var(--char-9);
+  }
+  100% {
+    content: var(--txt);
+  }
+}
+@keyframes glitch-switch {
+  0% {
+    content: var(--char-0);
+  }
+  10% {
+    content: var(--char-1);
+  }
+  20% {
+    content: var(--char-2);
+  }
+  30% {
+    content: var(--char-3);
+  }
+  40% {
+    content: var(--char-4);
+  }
+  50% {
+    content: var(--char-5);
+  }
+  60% {
+    content: var(--char-6);
+  }
+  70% {
+    content: var(--char-7);
+  }
+  80% {
+    content: var(--char-8);
+  }
+  90% {
+    content: var(--char-9);
+  }
+  100% {
+    content: var(--txt);
+  }
+}

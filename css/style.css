@@ -1,27 +1,34 @@
 @charset "utf-8";
 
+:root {
+  --dark: #1f1d1e;
+  --light: #efefef;
+  --color: var(--light);
+  --bg: var(--dark);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: var(--light);
+    --bg: var(--dark);
+  }
+
+	
 /* ----------------------------- Main CSS Document ----------------------------- */
 
     body {
         font-family: 'Secular One', sans-serif;
-		color: #efefef;
+		color: var(--color);
+		background: var(--bg);
 		font-size: 16px;
   		line-height: 150%;
         font-weight: normal;
 		text-align:left;
+		overflow-x:hidden;
+		-webkit-font-smoothing: antialiased;
 		-webkit-hyphens: auto;
   		-moz-hyphens: auto;
   		-ms-hyphens: auto;
   		hyphens: auto;
-        padding: 0;
-		margin: 0;
-        background: #1f1d1e;
-        -webkit-font-smoothing: antialiased;
-		overflow-x:hidden;
-		margin-block-start: 0px;
-    	margin-block-end: 0px;
-    	margin-inline-start: 0px;
-    	margin-inline-end: 0px;
     }
 
 	body {
@@ -37,24 +44,16 @@
 	}
 
 	h1 {
-    font-size: 5em;
+    font-size: 3em;
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: bold;
-	margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 	}
 
 	h2 {
     font-size: 2em;
 	text-align: center;
 	font-weight: 300;
-	margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 	line-height: 1em;
 	}
 
@@ -62,27 +61,15 @@
     font-size: 1.5em;
 	text-align: center;
 	font-weight: 200;
-	margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 	line-height: 0.5em;
 	}
 
 	a {
-  	color: #efefef;
-	margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  	color: var(--color);
 	}
 
 	p {
-  	color: #efefef;
-	margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  	color: var(--color);
 	}
 	
 	footer{position: absolute; bottom: 0;width: 100%;padding-top: 2.5em;padding-bottom: 2.5em;font-size: 0.4em;opacity: 0.2;text-decoration: none;text-align: center;margin-left: auto;margin-right: auto;}
@@ -94,7 +81,5 @@
 	.center-col{height: 100%; display: flex;align-items: center;justify-content: center;margin-left: auto;margin-right: auto;}
 
 	.vertical-align-wrap {position: absolute;width: 100%;height: 100%;display: table;}
-
 	.vertical-align {display: table-cell;}
-
 	.vertical-align--middle {vertical-align: middle;}
