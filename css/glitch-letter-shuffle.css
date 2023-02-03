@@ -2,7 +2,7 @@ p[data-scroll='in'] [data-char]:after {
   -webkit-animation-name: glitch-switch;
           animation-name: glitch-switch;
 }
-.reveal--2 [data-char]:after {
+.reveal [data-char]:after {
   -webkit-animation-iteration-count: var(--count);
           animation-iteration-count: var(--count);
 }
