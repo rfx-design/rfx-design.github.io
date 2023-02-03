@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 :root {
-  --dark: #1f1d1e;
+  --dark: #0e111e;
   --light: #efefef;
   --color: var(--light);
   --bg: var(--dark);
@@ -15,6 +15,13 @@
 	
 /* ----------------------------- Main CSS Document ----------------------------- */
 
+	.preload * {
+  	-webkit-transition: none !important;
+  	-moz-transition: none !important;
+  	-ms-transition: none !important;
+  	-o-transition: none !important;
+	}
+	
     body {
         font-family: 'Secular One', sans-serif;
 		color: var(--color);
