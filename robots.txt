@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: /*.pdf$
+Disallow: /js/
+Disallow: /css/
+Disallow: /img/
+Disallow: /favicon.ico
+Disallow: /favicon-16x16.png
+Disallow: /favicon-32x32.png
+Disallow: /impressum.html

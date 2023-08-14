@@ -1,0 +1,55 @@
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox iframe {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
+}
+
+.lightbox p {
+	color: black;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+	padding-top: 0.1em;
+	padding-right: 0.1em;
+    padding-left: 0.1em;
+    width: 1em;
+	margin-block-start: 2%;
+    margin-block-end: 1em;
+    margin-left: 82.5%;
+	opacity: 100;
+}
+.lightbox p:hover{
+		color: white;
+		background-color: black;
+}
