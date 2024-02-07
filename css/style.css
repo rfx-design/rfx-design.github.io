@@ -101,7 +101,7 @@
   		background: transparent url('../img/Noise.png') repeat 0 0;
   		background-repeat: repeat;
   		animation: bg-noise-animation .2s infinite;
-  		opacity: .55;
+  		opacity: .35;
   		visibility: visible;
 	}
 
