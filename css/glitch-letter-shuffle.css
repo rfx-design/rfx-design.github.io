@@ -1,3 +1,117 @@
+:root {
+  --flicker-color-1: #ff00ff;  /* #ea36af */
+  --flicker-color-2: #00ffff;  /* #00ffff     #75fa69 */
+}
+
+
+.loader_element {
+	height: 0.2em;
+	margin-top: 2em;
+	margin-left: 0.25em;
+	width: 100%;
+	max-width: 15.5em;
+	}
+
+	.loader_element:before {
+	content: '';
+	display: block;
+	background-color: var(--color);
+	height: 0.2em;
+	width: 0;
+  	animation: getWidth 1.5s ease;
+	animation-iteration-count: 1;
+	}
+
+	@keyframes getWidth {
+	100% { width: 100%; }
+	}
+
+	.loader_element:after {
+	display: none;
+	height: 0;
+	width: 0;
+	position: absolute;
+	margin-top: 0;
+	}
+
+
+	.flicker_logotext{
+		position: absolute;
+    	z-index: 1;
+    	margin-bottom: 0.4em;
+    	margin-left: 0.1em;
+    	letter-spacing: 0.03em;
+    	text-align: justify;
+
+	   text-shadow: 0.08em 0 0.08em var(--flicker-color-1), -0.125em 0 0.08em var(--flicker-color-2);
+       animation-duration: 0.01s;
+       animation-name: logotextflicker;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+	}
+
+	@keyframes logotextflicker {
+  		from {
+    		text-shadow: 1px -0.75px 0 var(--flicker-color-1), -2px 0.75px 0 var(--flicker-color-2);
+  		}
+  		to {
+    		text-shadow: 2px 0.75px 2px var(--flicker-color-1), -1px -0.75px 2px var(--flicker-color-2);
+  		}
+	}
+
+	.delaylogotext {
+  		animation: 1s fadeIn;
+  		animation-delay: 1.5s;
+  		animation-fill-mode: forwards;
+  		visibility: hidden;
+	}
+
+	@keyframes fadeIn {
+  		0% {
+    		opacity: 0;
+  		}
+  		100% {
+    		visibility: visible;
+    		opacity: 1;
+  		}
+	}
+
+	
+	.flicker{
+	   text-shadow: 0.05em 0 0.055em var(--flicker-color-1), -0.125em 0 0.055em var(--flicker-color-2);
+       animation-duration: 0.01s;
+       animation-name: textflicker;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+	}
+
+	@keyframes textflicker {
+  		from {
+    		text-shadow: 1.5px 0 0 var(--flicker-color-1), -1.5px 0 0 var(--flicker-color-2);
+  		}
+  		to {
+    		text-shadow: 1px 0.5px 2px var(--flicker-color-1), -1px -0.5px 2px var(--flicker-color-2);
+  		}
+	}
+
+	.delay {
+  		animation: 1s fadeIn;
+  		animation-delay: 1.75s;
+  		animation-fill-mode: forwards;
+  		visibility: hidden;
+	}
+
+	@keyframes fadeIn {
+  		0% {
+    		opacity: 0;
+  		}
+  		100% {
+    		visibility: visible;
+    		opacity: 1;
+  		}
+	}
+
+
 p[data-scroll='in'] [data-char]:after {
   -webkit-animation-name: glitch-switch;
           animation-name: glitch-switch;
@@ -106,24 +220,5 @@ p:nth-of-type(1) {
   }
   100% {
     content: var(--txt);
-  }
-}
-
-
-.glitch-txt {
-	   -webkit-animation-delay: 1s;
-       animation-delay: 1s;
-       animation-duration: 0.01s;
-       animation-name: textflicker;
-       animation-iteration-count: infinite;
-       animation-direction: alternate;
-}
-
-@keyframes textflicker {
-  from {
-    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
-  }
-  to {
-    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
   }
 }
