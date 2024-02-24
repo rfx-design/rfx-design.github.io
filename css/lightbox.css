@@ -35,7 +35,15 @@
 	display: block;
 }
 
-.lightbox p {
+.lightbox div {
+    position: absolute;
+    display: inline;
+    min-width: 325px;
+    width: 65%;
+	margin-block-start: 2%;
+}
+
+.lightbox div > p {
 	color: black;
     background-color: white;
     text-align: center;
@@ -44,12 +52,12 @@
 	padding-right: 0.1em;
     padding-left: 0.1em;
     width: 1em;
-	margin-block-start: 2%;
     margin-block-end: 1em;
-    margin-left: 82.5%;
+	right: 0;
 	opacity: 100;
 }
-.lightbox p:hover{
+
+.lightbox div > p:hover{
 		color: white;
 		background-color: black;
 }
